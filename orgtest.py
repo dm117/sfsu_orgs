@@ -1,6 +1,6 @@
 from greekalphabet import *
 
-myfile = open("orgs.txt","r")
+myfile = open("orgs.txt", "r")
 orglist = []
 
 for i in myfile:
@@ -8,9 +8,9 @@ for i in myfile:
 
 myfile.close()
 
-outfile1 = open("greekorgs.txt","w")
+outfile1 = open("greekorgs.txt", "w")
 
-#only write Greek orgs to file
+# only write Greek orgs to file
 for name in orglist[:]:
     for word in alphabet:
         if word in name:
@@ -26,8 +26,8 @@ for name in orglist[:]:
 
 outfile1.close()
 
-#only write orgs that aren't Greek to file
-outfile2 = open("orgsresults.txt","w")
+# only write orgs that aren't Greek to file
+outfile2 = open("orgsresults.txt", "w")
 for values in orglist:
     outfile2.write(values)
 
